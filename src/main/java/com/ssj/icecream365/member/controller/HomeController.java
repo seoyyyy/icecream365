@@ -1,4 +1,4 @@
-package com.ssj.icecream365.controllers;
+package com.ssj.icecream365.member.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.ssj.icecream365.controllers" />
+	<context:component-scan base-package="com.ssj.icecream365.controller" />
 	
 	
 	
