@@ -32,16 +32,16 @@
 	</servlet-mapping>
 	<!-- UTF-8 관련 파라미터 설정 -->
 	<filter>
-	    <filter-name>encodingFilterUTF8</filter-name>
-	    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-	    <init-param>
-	        <param-name>encoding</param-name>
-	        <param-value>UTF-8</param-value>
-	    </init-param>
+		<filter-name>encoding-filter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
 	</filter>
 	<filter-mapping>
-	    <filter-name>encodingFilterUTF8</filter-name>
-	    <url-pattern>/*</url-pattern>
+		<filter-name>encoding-filter</filter-name>
+		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
 	<!-- beans 관련 설정 -->

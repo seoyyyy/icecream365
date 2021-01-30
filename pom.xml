@@ -5,7 +5,7 @@
 	<groupId>com.ssj</groupId>
 	<artifactId>icecream365</artifactId>
 	<name>icecream365</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.8</java-version>
@@ -278,7 +278,14 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId> 
+			<artifactId>maven-resources-plugin</artifactId> 
+			<version>2.4.3</version> 
+		</dependency>
+
 	</dependencies>
     <build>
         <plugins>
@@ -316,6 +323,66 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.11.0</version>
+				<configuration>
+					<workingDirectory>src/main/frontend</workingDirectory>
+					<installDirectory>target</installDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<configuration>
+							<nodeVersion>v15.7.0</nodeVersion>
+							<npmVersion>7.4.3</npmVersion>
+						</configuration>	
+					</execution>
+					<execution>
+						<id>npm install</id>	
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+	        <artifactId>maven-antrun-plugin</artifactId>
+	        <version>3.0.0</version>
+	        <executions>
+	          <execution>
+	            <phase> <!-- a lifecycle phase --> </phase>
+	            <configuration>
+	              <target>
+	
+	                <copy todir="${project.build.directory}/classes/public">
+									<fileset dir="${project.basedir}/frontend/build"/>
+					</copy>
+	
+	              </target>
+	            </configuration>
+	            <goals>
+	              <goal>run</goal>
+	            </goals>
+	          </execution>
+	        </executions>
+	      </plugin>
         </plugins>
     </build>
 </project>
