@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import domain.Member;
+import com.ssj.icecream365.domain.Member;
 
 @RestController
 public class MemberAPI {

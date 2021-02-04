@@ -1,0 +1,40 @@
+/* 공통 ui 작성 */
+
+table {
+    border: 1px solid black;
+}
+
+.header {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100px;
+    border-bottom:1px solid #ccc;
+    background-color: gray;
+}
+
+.main {
+    height:1000px;
+}
+.footer {
+    height:100px;
+    border-top:1px solid #ccc;
+    background-color: gray;
+}
+
+ul li a {
+    color:black;
+    text-decoration: none;
+}
+
+.header ul li {
+    float: left;
+    position: relative;
+    font-size: 30px;
+    margin: 20px 10px 0 10px;
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}

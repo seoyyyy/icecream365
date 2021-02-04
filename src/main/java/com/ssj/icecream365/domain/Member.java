@@ -1,4 +1,4 @@
-package domain;
+package com.ssj.icecream365.domain;
 
 public class Member {
 	private String username;
