@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.memberMapper">
+<!--  쿼리 입력 -->
+	<!-- 회원 가입 -->
+	<insert id="register" parameterType="com.ssj.icecream365.domain.SignUp">
+		insert into customer(login_id, login_pw, name, zipcode, addr1, addr2, email, phone, role)
+		values  (#{login_id}, #{login_pw}, #{name}, #{zipcode}, #{addr1}, #{addr2}, #{email}, #{phone}, #{role})
+	</insert>
+	<!-- 중복 검사 -->
+	<select id="chkDup" resultType="String" parameterType="java.util.HashMap">
+		select ${key} from customer where ${key} =#{value}
+	</select>
+	
+</mapper>

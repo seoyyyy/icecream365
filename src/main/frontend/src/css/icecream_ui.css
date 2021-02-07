@@ -1,5 +1,11 @@
 /* 공통 ui 작성 */
 
+body, button, input, select, table, textarea {
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+    font-size: 12px;
+    -webkit-text-size-adjust: none;
+}
+
 table {
     border: 1px solid black;
 }
@@ -37,4 +43,40 @@ ul li a {
 
 ol, ul {
     list-style: none;
+}
+
+.container {
+    width:1000px;
+    margin:0px auto;
+    background-color: aliceblue;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.input-form {
+    width: 40%;
+    margin: 0px auto;
+    padding:2rem;
+}
+
+.input-form div label{
+    display: block;
+    font-weight: 700;
+    font-size:1em;
+    padding:1em .5em 0 0 ;
+}
+
+.input-form div input:not(.form-addr #zipcode, .form-email input, .form-phone input) {
+    width:100%;
+    height:30px;
+}
+
+.form-addr input {
+    height:30px;
+}
+
+.post_search .placeholder.show {
+    width:100%;
 }

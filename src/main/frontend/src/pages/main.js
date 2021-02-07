@@ -1,5 +1,4 @@
-import React,{useState} from 'react';
-import NavTop from '../components/nav/nav-top';
+import React from 'react';
 
 
 const Main = () => {

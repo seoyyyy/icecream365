@@ -2,3 +2,32 @@
     float: right;
     
 }
+
+#addr1, #addr2 {    
+    margin-top: 1rem;
+}
+
+.form-email input {
+    width:100px;
+    height:30px;
+}
+
+#selectEmail {
+    margin-left: 1em;
+}
+
+.post-code {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 400px;
+    height: 430px;
+    padding: 7px;
+    background-color: #ccc;
+}
+
+.modal-close {
+    color:gray;
+    font-weight: 700;
+    float:right;
+}

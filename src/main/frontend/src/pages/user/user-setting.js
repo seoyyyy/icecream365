@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserInfo = () => {
+const UserSetting = () => {
 
     return (
         <div>
@@ -10,4 +10,4 @@ const UserInfo = () => {
 
 }
 
-export default UserInfo;
+export default UserSetting;

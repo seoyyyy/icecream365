@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import { Route } from 'react-router-dom';
 //import nav
 import NavFooter from './components/nav/nav-footer';
@@ -8,11 +8,11 @@ import NavTop from './components/nav/nav-top';
 import Main from './pages/main';
 import ReviewBoard from './pages/review/review-board';
 import NoticeBoard from './pages/notice/notice-board';
-import SignUp from './pages/signup';
+import SignUp from './pages/user/signup';
 import Login from './pages/login';
 import ManagerMain from './pages/store-manager/manager-main';
 import AdminMain from './pages/admin/admin-main';
-import UserInfo from './pages/user/user-info';
+import UserSetting from './pages/user/user-setting';
 import Order from './pages/order/order';
 
 
@@ -40,7 +40,7 @@ function App () {
         <Route path="/signup" component={SignUp}/>
         <Route path="/login" component={Login}/> 
         {/* 로그인 했을 때 볼 수 있는 페이지 - 회원 정보 관리 */}
-        <Route path="/user-info" component={UserInfo}/>
+        <Route path="/user-info" component={UserSetting}/>
       </div>
       <div className="footer">
         <NavFooter/>
