@@ -7,7 +7,7 @@ import NavTop from './components/nav/nav-top';
 //import page
 import Main from './pages/main';
 import ReviewBoard from './pages/review/review-board';
-import NoticeBoard from './pages/notice/notice-board';
+import NoticeBoard from './pages/notice/board';
 import SignUp from './pages/user/signup';
 import Login from './pages/login';
 import ManagerMain from './pages/store-manager/manager-main';
